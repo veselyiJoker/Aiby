@@ -1,0 +1,18 @@
+footer {
+    padding-bottom: 38px;
+}
+
+.footer__links-list {
+    display: flex;
+    padding: 0 24px;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.footer__links-list-item {
+    font-size: 11px;
+    a {
+        font-family: Roboto;
+        color: #BDC0D0;
+    }
+}
