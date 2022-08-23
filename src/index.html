@@ -9,8 +9,12 @@
 <body>
     <main>
         <header>
-            <a class='close-link' href='#'></a>
-            <a class='restore-link' href='#'>Restore</a>
+            <nav>
+                <a class='close-link' href='#'>
+                    <span class='visually-hidden'>Close</span>
+                </a>
+                <a class='restore-link' href='#'>Restore</a>
+            </nav>
         </header>
 
         <section class='main__wrapper'>
@@ -31,32 +35,41 @@
                     </ul>
                 </div> <!-- features -->
     
-                <div class='suggestions'>
-                    <ul class='suggestions__list'>
-                        <li class='suggestions__list-item'>
-                            <h2>Monthly</h2>
-                            <h3>
-                                $9.99
-                                <span>per month</span>
-                            </h3>
-                            <p class='suggestions__benefit'>3 days free!</p>
-                            <p class='suggestions__price-per-month'>$9.99 month</p>
-                        </li>
-                        <li class='suggestions__list-item'>
-                            <h2>Annually</h2>
-                            <h3>
-                                $19.99
-                                <span>per year</span>
-                            </h3>
-                            <p class='suggestions__benefit'>most popular</p>
-                            <p class='suggestions__price-per-month'>$1.66 month</p>
-                        </li>
-                    </ul>
+                <form class='suggestions'>
+                    <fieldset>
+                        <legend class='visually-hidden' >Suggestions</legend>
+                        <ul class='suggestions__list'>
+                            <li class='suggestions__list-item'>
+                                <input type='radio' name='suggestions' value='monthly' id='monthly'>
+                                <h2>
+                                    <label for='monthly'>Monthly</label>
+                                </h2>
+                                <h3>
+                                    $9.99
+                                    <span>per month</span>
+                                </h3>
+                                <p class='suggestions__benefit'>3 days free!</p>
+                                <p class='suggestions__price-per-month'>$9.99 month</p>
+                            </li>
+                            <li class='suggestions__list-item'>
+                                <input type='radio' name='suggestions' value='annually' id='annually'>
+                                <h2>
+                                    <label for='annually'>Annually</label>
+                                </h2>
+                                <h3>
+                                    $19.99
+                                    <span>per year</span>
+                                </h3>
+                                <p class='suggestions__benefit'>most popular</p>
+                                <p class='suggestions__price-per-month'>$1.66 month</p>
+                            </li>
+                        </ul>
+                    </fieldset>
 
-                    <a class='suggestions__continue-link' href='#'>Continue</a>
+                    <button type='submit' class='suggestions__continue-link' href='#'>Continue</button>
                     <p class='suggestions__additional-information'>Auto-rewable. Cancel anytime</p>
     
-                </div> <!-- suggestions -->
+                </form> <!-- suggestions -->
                 <footer>
                     <ul class='footer__links-list'>
                         <li class='footer__links-list-item'>
