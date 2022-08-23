@@ -1,5 +1,5 @@
 .suggestions {
-    padding: 0 24px;
+    padding: 0 20px;
 }
 
 .suggestions__list {
@@ -10,24 +10,21 @@
 }
 
 .suggestions__list-item {
-
-}
-
-.suggestions__list-item {
     box-sizing: border-box;
     width: 131px;
-    padding: 23px 11px 13px 11px;
+    padding: 23px 11px 12px 11px;
     margin-right: 20px;
     font-family: SFProDisplay;
     border: 1px solid #495795;
-    border-radius: 21px;    
+    border-radius: 21px;
+    background: rgba(73, 87, 149, 0.197154);
 
     &:last-child {
         margin: 0;
     }
 
     h2 {
-        margin-bottom: 18px;
+        margin-bottom: 16px;
         font-family: SFProDisplay;
         font-size: 17px;
         font-weight: 600;
@@ -41,7 +38,7 @@
         font-size: 22px;
         line-height: 15px;
         text-align: center;
-        margin: 0 auto 10px auto;
+        margin: 0 auto 13px auto;
     }
 
     span {
@@ -52,12 +49,15 @@
 }
 
 .suggestions__benefit {
+    width: calc(100% + 30px);
+    margin-left: -15px;
     font-size: 14px;
-    line-height: 16px;
+    line-height: 20px;
     text-align: center;
     font-weight: 700;
     text-transform: uppercase;
-    margin-bottom: 11px;
+    margin-bottom: 10px;
+    background: #495795;
 }
 
 .suggestions__price-per-month {
@@ -72,6 +72,7 @@
     margin: 0 auto 16px auto;
     font-family: SFProDisplay;
     font-size: 17px;
+    font-weight: 500;
     line-height: 54px;
     text-align: center;
     text-decoration: none;
@@ -82,8 +83,9 @@
 
 .suggestions__additional-information {
     margin-bottom: 16px;
-    font-family: SFProDisplay;
+    font-family: Roboto;
     font-size: 11px;
+    font-weight: 300;
     line-height: 13px;
     text-align: center;
     opacity: 0.5;

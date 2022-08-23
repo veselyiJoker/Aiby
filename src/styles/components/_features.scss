@@ -1,22 +1,23 @@
 .features {
-    margin-bottom: 57px;
+    margin-bottom: 51px;
 }
 
 .features__title {
     width: 285px;
     margin: 0 auto 29px auto;
     font-family: SFProDisplay;
-    font-size: 36px;
+    font-size: 37px;
     font-weight: 600;
     line-height: 42px;
     text-align: center;
     color: #fff;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .features__list {
-    padding-left: 37px;
+    padding-left: 50px;
     list-style: none;
-    line-height: 30px;
+    line-height: 31px;
 }
 
 .features__list-item {
@@ -25,13 +26,15 @@
     margin: auto;
     font-family: SFProText;
     font-size: 17px;
+    font-weight: 100;
     text-align: left;
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.684495);
 
     &::before {
         content: '';
         position: absolute;
         top: 0px;
-        left: -37px;
+        left: -35px;
         width: 30px;
         height: 30px;
         background-position: center center;
@@ -40,16 +43,13 @@
 
     &--unlimited-documents::before {
         background-image: url('../images/unlimited-documents.svg');
-        background-size: 23px 12px;
     }
 
     &--export-to-clouds::before {
         background-image: url('../images/export-to-clouds.svg');
-        background-size: 16px 18px;
     }
 
     &--text-recognition::before {
         background-image: url('../images/text-recognition.svg');
-        background-size: 21px 21px;
     }
 }
