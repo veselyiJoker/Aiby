@@ -9,26 +9,6 @@ main {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 21.61%, rgba(33, 38, 51, 0.95) 64.3%);
 }
 
-.close-link {
-    position: absolute;
-    top: 44px;
-    left: 24px;
-    width: 16px;
-    height: 16px;
-    background-image: url('../images/cross.svg');
-}
-
-.restore-link {
-    position: absolute;
-    top: 43px;
-    right: 20px;
-    font-family: SFProText;
-    font-size: 13px;
-    font-weight: 300;
-    text-decoration: none;
-    color: rgba(255, 255, 255, 0.6);
-}
-
 .main__wrapper {
     position: absolute;
     width: 100%;
@@ -42,4 +22,5 @@ main {
     left: 50%;
     bottom: 0;
     transform: translateX(-50%);
+    border: n;
 }

@@ -1,0 +1,41 @@
+header {
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    right: 0px;
+    font-family: SFProText;
+    font-size: 13px;
+    font-weight: 300;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__menu {
+    display: flex;
+    list-style: none;
+
+    a {
+        display: block;
+        padding: 44px 20px;
+        font-family: SFProText;
+        font-size: 13px;
+        font-weight: 300;
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.6);
+    }
+}
+
+.close-link {
+    display: block;
+    padding: 44px 20px;
+    width: 16px;
+    height: 16px;
+    background-image: url('../images/cross.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
