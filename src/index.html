@@ -7,33 +7,32 @@
     <title>Document</title>
 </head>
 <body>
+    <header>
+        <nav>
+            <a class='header__close' href='#'>
+                <span class='visually-hidden'>Close</span>
+            </a>
+            <ul class='header__menu'>
+                <li class='header__menu-item'>
+                    <a class='header__menu-link' href='#'>Restore</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
     <main>
-        <header>
-            <nav>
-                <a class='close-link' href='#'>
-                    <span class='visually-hidden'>Close</span>
-                </a>
-                <ul class='header__menu'>
-                    <li>
-                        <a href='#'>Restore</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-
         <section class='main__wrapper'>
             <div class='main__content'>
                 <div class='features'>
                     <h1 class='features__title'>Unlimited Access to All Features</h1>
     
                     <ul class='features__list'>
-                        <li class='features__list-item features__list-item--unlimited-documents'>
+                        <li class='features__item features__item--unlimited-documents'>
                             Unlimited documents
                         </li>
-                        <li class='features__list-item features__list-item--export-to-clouds'>
+                        <li class='features__item features__item--export-to-clouds'>
                             Export to clouds
                         </li>
-                        <li class='features__list-item features__list-item--text-recognition'>
+                        <li class='features__item features__item--text-recognition'>
                             Text recognition (OCR)
                         </li>
                     </ul>
@@ -48,10 +47,10 @@
                                 <h2>
                                     <label for='monthly'>Monthly</label>
                                 </h2>
-                                <h3 class='suggestions__price'>
+                                <p class='suggestions__price'>
                                     $9.99
                                     <span>per month</span>
-                                </h3>
+                                </p>
                                 <p class='suggestions__benefit'>3 days free!</p>
                                 <p class='suggestions__price-per-month'>$9.99 month</p>
                             </li>
@@ -60,10 +59,10 @@
                                 <h2>
                                     <label for='annually'>Annually</label>
                                 </h2>
-                                <h3 class='suggestions__price'>
+                                <p class='suggestions__price'>
                                     $19.99
                                     <span>per year</span>
-                                </h3>
+                                </p>
                                 <p class='suggestions__benefit'>most popular</p>
                                 <p class='suggestions__price-per-month'>$1.66 month</p>
                             </li>

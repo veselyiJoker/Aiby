@@ -9,8 +9,9 @@
 
 .suggestions__list {
     display: flex;
-    justify-content: center;
     list-style: none;
+    overflow: auto;
+    max-width: 100vw;
 }
 
 .suggestions__list-item {

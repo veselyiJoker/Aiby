@@ -8,31 +8,33 @@ header {
     font-weight: 300;
     text-decoration: none;
     color: rgba(255, 255, 255, 0.6);
+    z-index: 13;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
+    margin-top: 22px;
 }
 
 .header__menu {
     display: flex;
     list-style: none;
-
-    a {
-        display: block;
-        padding: 44px 20px;
-        font-family: SFProText;
-        font-size: 13px;
-        font-weight: 300;
-        text-decoration: none;
-        color: rgba(255, 255, 255, 0.6);
-    }
 }
 
-.close-link {
+.header__menu-link {
     display: block;
-    padding: 44px 20px;
+    padding: 20px;
+    font-family: SFProText;
+    font-size: 13px;
+    font-weight: 300;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.header__close {
+    display: block;
+    padding: 20px;
     width: 16px;
     height: 16px;
     background-image: url('../images/cross.svg');
