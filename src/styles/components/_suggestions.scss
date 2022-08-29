@@ -1,32 +1,44 @@
 .suggestions {
-    padding: 0 20px;
 }
 
 .suggestions__fieldset {
-    margin: 0 0 24px 0;
+    margin: 0 ;
+    padding: 0;
     border: none;
 }
 
 .suggestions__list {
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     list-style: none;
-    overflow: auto;
-    max-width: 100vw;
 }
 
 .suggestions__list-item {
     position: relative;
-    box-sizing: border-box;
-    min-width: 131px;
-    padding: 23px 11px 12px 11px;
-    margin-right: 20px;
+    margin: 0 10px 24px 10px;
     font-family: SFProDisplay;
-    border: 1px solid #495795;
-    border-radius: 21px;
-    background: rgba(73, 87, 149, 0.197154);
 
-    &:last-child {
-        margin: 0;
+    input[type='radio'] {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 21px;
+        appearance: none;
+        cursor: pointer;
+        outline: none;
+        z-index: 2;
+
+        &:checked {
+            transform: scale(1.1);
+
+            & ~ .suggestions__card {
+                transform: scale(1.1);
+                opacity: 1;
+            }
+        }
     }
 
     h2 {
@@ -38,30 +50,28 @@
         text-align: center;
     }
 
-    input {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        border-radius: 0;
-        appearance: none;
-        cursor: pointer;
-    }
+}
 
+.suggestions__card {
+    box-sizing: border-box;
+    min-width: 131px;
+    padding: 23px 11px 12px 11px;
+    border: 1px solid #495795;
+    background: rgba(73, 87, 149, 0.197154);
+    border-radius: 21px;
+    opacity: 0.25;
+    transition: 0.15s;
 }
 
 .suggestions__price {
     width: 68px;
-    font-weight: 700;
-    font-size: 22px;
+    font-size: 14px;
     line-height: 15px;
     text-align: center;
-    margin: 0 auto 13px auto;
+    margin: 0 auto 10px auto;
     
-    span {
-        font-size: 14px;
-        font-weight: 400;
+    strong {
+        font-size: 22px;
     }
 }
 
@@ -84,20 +94,22 @@
     text-align: center;
 }
 
-.suggestions__continue-link {
+.suggestions__continue {
     display: block;
-    width: 280px;
+    max-width: 280px;
+    width: 100%;
     margin: 0 auto 16px auto;
     font-family: SFProDisplay;
     font-size: 17px;
     font-weight: 500;
-    line-height: 54px;
+    line-height: 52px;
     text-align: center;
     text-decoration: none;
     color: #fff;
     border: none;
     border-radius: 30px;
     background: linear-gradient(270deg, #1987FF 0%, #19CCFF 100%);
+    cursor: pointer;
 }
 
 .suggestions__additional-information {

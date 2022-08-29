@@ -14,11 +14,13 @@ header {
 nav {
     display: flex;
     justify-content: space-between;
-    margin-top: 22px;
+    margin-top: 24px;
 }
 
 .header__menu {
     display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
     list-style: none;
 }
 
@@ -34,7 +36,7 @@ nav {
 
 .header__close {
     display: block;
-    padding: 20px;
+    padding: 20px 24px;
     width: 16px;
     height: 16px;
     background-image: url('../images/cross.svg');
