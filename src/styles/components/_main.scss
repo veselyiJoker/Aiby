@@ -2,7 +2,7 @@ main {
     height: 100vh;
     color: #fff;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 21.61%, rgba(33, 38, 51, 0.95) 64.3%);
-    background-image: url($main_bkg);
+    background-image: url($main-bkg-small);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;

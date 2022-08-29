@@ -1,6 +1,13 @@
+// sizes 
 $iphone_SE_width: 375px;
 $iphone_SE_height: 667px;
 
-$min-height: $iphone_SE_height;
+// fonts
+$SFProDisplay: SFProDisplay;
+$SFProText: SFProText;
+$Roboto: Roboto;
 
-$main-bkg: '../images/background.png'
+// links
+$main-bkg-small: '../images/background.png';
+$main-bkg-medium: '../images/background.png';
+$main-bkg-large: '../images/background.png';

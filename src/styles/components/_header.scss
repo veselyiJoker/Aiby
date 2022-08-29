@@ -3,7 +3,7 @@ header {
     width: 100%;
     top: 0px;
     right: 0px;
-    font-family: SFProText;
+    font-family: $SFProText;
     font-size: 13px;
     font-weight: 300;
     text-decoration: none;
@@ -27,7 +27,7 @@ nav {
 .header__menu-link {
     display: block;
     padding: 20px;
-    font-family: SFProText;
+    font-family: $SFProText;
     font-size: 13px;
     font-weight: 300;
     text-decoration: none;
