@@ -1,5 +1,5 @@
 main {
-    height: 100vh;
+    min-height: 100vh;
     color: #fff;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 21.61%, rgba(33, 38, 51, 0.95) 64.3%);
     background-image: url($main-bkg-small);
@@ -22,6 +22,6 @@ main {
 .main__content {
     box-sizing: border-box;
     position: absolute;
-    max-height: calc(100vh - 100px);
+    max-height: calc(100vh - 72px);
     bottom: 0;
 }

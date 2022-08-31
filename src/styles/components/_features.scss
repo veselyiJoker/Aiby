@@ -11,29 +11,33 @@
     text-align: center;
     color: #fff;
     text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    word-break: break-word;
 }
 
 .features__list {
+    width: fit-content;
+    margin: auto;
     list-style: none;
     line-height: 31px;
 }
 
 .features__item {
     position: relative;
-    width: 186px;
-    padding-left: 53px;
-    margin: auto;
+    width: fit-content;
+    max-width: 270px;
+    padding-left: 45px;
     font-family: SFProText;
     font-size: 17px;
     font-weight: 100;
     text-align: left;
     text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.684495);
+    word-break: break-word;
 
     &::before {
         content: '';
         position: absolute;
         top: 0px;
-        left: 18px;
+        left: 11px;
         width: 30px;
         height: 30px;
         background-position: center center;

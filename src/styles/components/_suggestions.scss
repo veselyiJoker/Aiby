@@ -54,6 +54,7 @@
 }
 
 .suggestions__card {
+    position: relative;
     box-sizing: border-box;
     min-width: 131px;
     padding: 23px 11px 12px 11px;
@@ -61,7 +62,8 @@
     background: rgba(73, 87, 149, 0.197154);
     border-radius: 21px;
     opacity: 0.25;
-    transition: 0.15s;
+    clip-path: ellipse(250px 150px at 50%);
+    transition: ease-in-out 0.25s, opacity 0.5s;
 }
 
 .suggestions__price {

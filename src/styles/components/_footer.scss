@@ -1,14 +1,15 @@
 footer {
     box-sizing: border-box;
-    width: min(calc(100% + 42px), 100vw);
-    margin-left: max(calc((100vw - 100%) / -2), -20px);
-    padding-bottom: 18px;
+    width: min(calc(100% + 24px), 100vw);
+    margin-left: max(calc((100vw - 100%) / -2), -12px);
+    padding-bottom: 38px;
 }
 
 .footer__links-list {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    padding: 0 10px;
     list-style: none;
 }
 
@@ -16,8 +17,6 @@ footer {
     font-size: 11px;
     font-weight: 300;
     a {
-        display: block;
-        padding: 20px 10px;
         font-family: $Roboto;
         color: #afb1c0;
     }

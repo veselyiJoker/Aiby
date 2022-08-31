@@ -14,7 +14,11 @@ header {
 nav {
     display: flex;
     justify-content: space-between;
-    margin-top: 24px;
+    margin-top: 34px;
+
+    @media (max-height: calc($iphone_SE_height + 20px)) {
+        margin-top: 25px;
+    }
 }
 
 .header__menu {
@@ -26,20 +30,32 @@ nav {
 
 .header__menu-link {
     display: block;
-    padding: 20px;
+    padding: 10px 20px;
     font-family: $SFProText;
     font-size: 13px;
     font-weight: 300;
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.6);
+    color: #fff;
+    opacity: 0.6;
+    transition: 0.3s;
+
+    &:hover {
+        opacity: 1;  
+    }
 }
 
 .header__close {
     display: block;
-    padding: 20px 24px;
+    padding: 10px 24px;
     width: 16px;
     height: 16px;
     background-image: url('../images/cross.svg');
     background-repeat: no-repeat;
     background-position: center;
+    opacity: 0.4;
+    transition: 0.3s;
+
+    &:hover {
+        opacity: 1;  
+    }
 }
