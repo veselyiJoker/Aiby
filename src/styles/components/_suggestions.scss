@@ -32,18 +32,55 @@
         outline: none;
         z-index: 2;
 
-        &:checked {
+        &:checked ~ .suggestions__card {
             transform: scale(1.1);
+            opacity: 1;
+        }
+    }
+}
 
-            & ~ .suggestions__card {
-                transform: scale(1.1);
-                opacity: 1;
-            }
+.suggestions__card {
+    box-sizing: border-box;
+    position: relative;
+    min-width: 133px;
+    padding: 23px 11px 12px 11px;
+    opacity: 0.25;
+    transition: ease-in-out 0.25s, opacity 0.5s;
+    
+    &::before {
+        box-sizing: border-box;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 1px solid #495795;
+        border-radius: 21px;
+        background: rgba(73, 87, 149, 0.197154);
+    }
+
+    &--with-discount {
+        &::before {
+            mask: radial-gradient(18px at calc(100% - 16px) 16px,#0000 100%,#000);
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: #495795;
+            border-radius: 21px;
+            mask: radial-gradient(18px at calc(100% - 16px) 16px,#0000 calc(100% - 1px),#000 calc(100% - 1px) 100%,#0000);
         }
     }
 
     h2 {
-        margin: 0 0 16px 0;
+        margin: 0 0 21px 0;
         font-family: $SFProDisplay;
         font-size: 17px;
         font-weight: 600;
@@ -53,25 +90,26 @@
 
 }
 
-.suggestions__card {
-    position: relative;
-    box-sizing: border-box;
-    min-width: 131px;
-    padding: 23px 11px 12px 11px;
-    border: 1px solid #495795;
-    background: rgba(73, 87, 149, 0.197154);
-    border-radius: 21px;
-    opacity: 0.25;
-    clip-path: ellipse(250px 150px at 50%);
-    transition: ease-in-out 0.25s, opacity 0.5s;
+.suggestions__discount {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    font-family: $SFProDisplay;
+    font-size: 10px;
+    background: red;
+    width: 30px;
+    margin: 0;
+    line-height: 30px;
+    border-radius: 50%;
+    text-align: center;
 }
 
 .suggestions__price {
     width: 68px;
     font-size: 14px;
-    line-height: 15px;
+    line-height: 13px;
     text-align: center;
-    margin: 0 auto 10px auto;
+    margin: 0 auto 13px auto;
     
     strong {
         font-size: 22px;
@@ -79,10 +117,10 @@
 }
 
 .suggestions__benefit {
-    width: calc(100% + 30px);
-    margin: 0 0 0 -15px;
+    width: calc(100% + 26px);
+    margin: 0 0 0 -13px;
     font-size: 14px;
-    line-height: 20px;
+    min-height: 21px;
     text-align: center;
     font-weight: 700;
     text-transform: uppercase;

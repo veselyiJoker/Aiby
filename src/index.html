@@ -3,7 +3,7 @@
 <head>
     <meta charset='UTF-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
     <title>aiby</title>
 </head>
 <body>
@@ -41,7 +41,7 @@
                     </ul>
                 </div> <!-- features -->
 
-                <form class='suggestions'>
+                <form class='suggestions'> 
                     <fieldset class='suggestions__fieldset'>
                         <legend class='visually-hidden'>Suggestions</legend>
                         <ul class='suggestions__list'>
@@ -61,7 +61,10 @@
                             </li>
                             <li class='suggestions__list-item'>
                                 <input type='radio' name='suggestions' value='annually' id='annually'>
-                                <div class='suggestions__card'>
+                                <div class='suggestions__card suggestions__card--with-discount'>
+                                    <p class='suggestions__discount'>
+                                        <strong>-83%</strong>
+                                    </p>
                                     <h2>
                                         <label for='annually'>Annually</label>
                                     </h2>
@@ -76,7 +79,7 @@
                         </ul>
                     </fieldset>
 
-                    <button type='submit' class='suggestions__continue'>Continue</button>
+                    <button type='submit' class='suggestions__continue' formaction='https://apple.com/'>Continue</button>
                     <p class='suggestions__additional-information'>Auto-rewable. Cancel anytime</p>
                 </form> <!-- suggestions -->
 
