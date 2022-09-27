@@ -1,13 +1,9 @@
-// sizes 
-$iphone_SE_width: 375px;
-$iphone_SE_height: 667px;
-
 // fonts
-$SFProDisplay: SFProDisplay;
-$SFProText: SFProText;
-$Roboto: Roboto;
+$SFProDisplay: SFProDisplay, sans-serif, serif;
+$SFProText: SFProText, sans-serif, serif;
+$Roboto: Roboto, sans-serif, serif;
 
 // links
-$main-bkg-small: '../images/background.png';
-$main-bkg-medium: '../images/background.png';
-$main-bkg-large: '../images/background.png';
+$main-bkg: '../images/background.png';
+$main-bkg-2x: '../images/background@2x.png';
+$main-bkg-3x: '../images/background@3x.png';

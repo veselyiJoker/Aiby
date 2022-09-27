@@ -16,8 +16,8 @@ nav {
     justify-content: space-between;
     margin-top: 34px;
 
-    @media (max-height: calc($iphone_SE_height + 20px)) {
-        margin-top: 25px;
+    @media ( max-height: 812px ) {
+        margin-top: 20px;
     }
 }
 

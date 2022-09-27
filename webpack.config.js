@@ -16,7 +16,7 @@ module.exports = {
     },
     entry: path.resolve(__dirname, 'src', 'index.js'),
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'docs'),
         filename: '[name].[contenthash].js',
         assetModuleFilename: 'assets/[hash][ext][query]',
         clean: true,

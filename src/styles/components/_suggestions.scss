@@ -120,7 +120,7 @@
     width: calc(100% + 26px);
     margin: 0 0 0 -13px;
     font-size: 14px;
-    min-height: 21px;
+    line-height: 21px;
     text-align: center;
     font-weight: 700;
     text-transform: uppercase;
@@ -154,7 +154,7 @@
 }
 
 .suggestions__additional-information {
-    margin-bottom: 16px;
+    margin-bottom: 4px;
     font-family: $Roboto;
     font-size: 11px;
     font-weight: 300;
