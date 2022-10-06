@@ -16,6 +16,7 @@
 
 .features__list {
     width: fit-content;
+    max-width: 250px;
     margin: auto;
     list-style: none;
     line-height: 31px;
@@ -23,10 +24,8 @@
 
 .features__item {
     position: relative;
-    width: fit-content;
-    max-width: 270px;
     padding-left: 45px;
-    font-family: SFProText;
+    font-family: $SFProText;
     font-size: 17px;
     font-weight: 100;
     text-align: left;

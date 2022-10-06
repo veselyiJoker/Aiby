@@ -5,6 +5,10 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <title>Aiby</title>
+    <!-- critical css here -->
+    <style type='text/css'>
+
+    </style>
 </head>
 <body>
     <header>
@@ -42,16 +46,16 @@
                     </ul>
                 </div> <!-- features -->
 
-                <form class='suggestions'> 
+                <form class='suggestions'>
                     <fieldset class='suggestions__fieldset'>
                         <legend class='visually-hidden'>Suggestions</legend>
                         <ul class='suggestions__list'>
                             <li class='suggestions__list-item'>
-                                <input class='visually-hidden' type='radio' name='suggestions' value='monthly' id='monthly' checked>
-                                <div class='suggestions__card'>
-                                    <h2>
-                                        <label for='monthly'>Monthly</label>
-                                    </h2>
+                                <div class='suggestions__card suggestions__card--active suggestions__card--noscript'>
+                                    <h2>Monthly</h2>
+                                    <!-- we need to cancel highlighting when scripts are disabled,
+                                    so all selection processing will be in js (no css) -->
+                                    <input type='radio' name='suggestions' value='monthly' id='monthly' checked>
                                     <p class='suggestions__price'>
                                         <strong>$9.99</strong>
                                         <br>per month
@@ -59,28 +63,35 @@
                                     <p class='suggestions__benefit'>3 days free!</p>
                                     <p class='suggestions__price-per-month'>$9.99 month</p>
                                 </div>
+                                <noscript>
+                                    <button class='suggestions__continue suggestions__continue--noscript' type='submit' name='suggestions' value='monthly' formaction='https://google.com/'>Continue</button>
+                                </noscript>
                             </li>
+
                             <li class='suggestions__list-item'>
-                                <input class='visually-hidden' type='radio' name='suggestions' value='annually' id='annually'>
-                                <div class='suggestions__card suggestions__card--with-discount'>
-                                    <p class='suggestions__discount'>
-                                        <strong>-83%</strong>
-                                    </p>
-                                    <h2>
-                                        <label for='annually'>Annually</label>
-                                    </h2>
+                                <div class='suggestions__card suggestions__card--with-discount suggestions__card--noscript'>
+                                    <h2>Annually</h2>
+                                    <!-- we need to cancel highlighting when scripts are disabled,
+                                    so all selection processing will be in js (no css) -->
+                                    <input type='radio' name='suggestions' value='annually' id='annually'>
                                     <p class='suggestions__price'>
                                         <strong>$19.99</strong>
                                         <br>per year
                                     </p>
+                                    <p class='suggestions__discount'>
+                                        <strong>-83%</strong>
+                                    </p>
                                     <p class='suggestions__benefit'>most popular</p>
                                     <p class='suggestions__price-per-month'>$1.66 month</p>
                                 </div>
+                                <noscript>
+                                    <button class='suggestions__continue suggestions__continue--noscript' type='submit' name='suggestions' value='monthly' formaction='https://yandex.com/'>Continue</button>
+                                </noscript>
                             </li>
                         </ul>
                     </fieldset>
 
-                    <button type='submit' class='suggestions__continue' formaction='https://apple.com/'>Continue</button>
+                    <button type='submit' class='suggestions__continue suggestions__continue-submit visually-hidden'>Continue</button> 
                     <p class='suggestions__additional-information'>Auto-rewable. Cancel anytime</p>
                 </form> <!-- suggestions -->
 

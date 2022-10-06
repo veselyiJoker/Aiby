@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #212634;
+    font-family: sans-serif;
 }
 
 ul, li {
@@ -10,5 +11,5 @@ ul, li {
 }
 
 .visually-hidden {
-    display: none;
+    display: none !important;
 }
