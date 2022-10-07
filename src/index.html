@@ -4,11 +4,9 @@
     <meta charset='UTF-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name="description" content="Author: Yahor Antushevich. PS: Special for Aiby">
     <title>Aiby</title>
-    <!-- critical css here -->
-    <style type='text/css'>
-
-    </style>
+    <!-- critical css could be here, but i think it's overkill -->
 </head>
 <body>
     <header>
@@ -52,10 +50,12 @@
                         <ul class='suggestions__list'>
                             <li class='suggestions__list-item'>
                                 <div class='suggestions__card suggestions__card--active suggestions__card--noscript'>
-                                    <h2>Monthly</h2>
+                                    <h2>
+                                        <label for='monthly'>Monthly</label>
+                                    </h2>
                                     <!-- we need to cancel highlighting when scripts are disabled,
                                     so all selection processing will be in js (no css) -->
-                                    <input type='radio' name='suggestions' value='monthly' id='monthly' checked>
+                                    <input type='radio' id='monthly' name='suggestions' value='monthly' checked>
                                     <p class='suggestions__price'>
                                         <strong>$9.99</strong>
                                         <br>per month
