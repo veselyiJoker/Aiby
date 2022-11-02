@@ -156,10 +156,6 @@
     background: linear-gradient(270deg, #1987FF 0%, #19CCFF 100%);
     cursor: pointer;
 
-    &:disabled {
-        opacity: 0.1;
-    }
-
     &--noscript {
         margin-top: 30px;
     }

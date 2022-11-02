@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang='ru'>
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name="description" content="Author: Yahor Antushevich. PS: Special for Aiby">
+    <title>Aiby</title>
+    <!-- critical css here -->
+    <style>
+        @import './base/variables.scss';
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #212634;
+            font-family: sans-serif;
+        }
+        ul, li {
+            margin: 0;
+            padding: 0;
+        }
+        .visually-hidden {
+            display: none !important;
+        }
+        main {
+            min-height: 100vh;
+            color: #fff;
+            background: linear-gradient( 180deg, rgba( 0, 0, 0, 0.0001 ) 21.61%, rgba( 33, 38, 51, 0.95 ) 64.3% );
+            background-image: url( $main-bkg );
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
+        .main__wrapper {
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            width: 100%;
+            height: min(35vh, 290px);
+            bottom: 0;
+            background: #212634;
+        }
+        .main__content {
+            box-sizing: border-box;
+            position: absolute;
+            max-height: calc(100vh - 72px);
+            bottom: 0;
+        }
+        header {
+            position: absolute;
+            width: 100%;
+            top: 0px;
+            right: 0px;
+            font-family: SFProText, sans-serif, serif;
+            font-size: 13px;
+            font-weight: 300;
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.6);
+            z-index: 13;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 34px;
+        }
+        .header__menu {
+            display: flex;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+            list-style: none;
+        }
+        .features {
+            margin-bottom: 51px;
+        }
+        .features__title {
+            margin: 0 auto 29px auto;
+            font-family: SFProDisplay, sans-serif, serif;
+            font-size: 37px;
+            font-weight: 600;
+            line-height: 43px;
+            text-align: center;
+            color: #fff;
+            text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+            word-break: break-word;
+        }
+        .features__list {
+            width: fit-content;
+            max-width: 250px;
+            margin: auto;
+            list-style: none;
+            line-height: 31px;
+        }
+        .features__item {
+            position: relative;
+            padding-left: 45px;
+            font-family: SFProText, sans-serif, serif;
+            font-size: 17px;
+            font-weight: 100;
+            text-align: left;
+            text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.684495);
+            word-break: break-word;
+        }
+        .suggestions {
+            padding: 0px 8px;
+        }
+        .suggestions__fieldset {
+            margin: 0 ;
+            padding: 0;
+            border: none;
+        }
+        .suggestions__list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            list-style: none;
+        }
+        .suggestions__list-item {
+            position: relative;
+            margin: 0 10px 24px 10px;
+            font-family: SFProDisplay, sans-serif, serif;
+        }
+        .suggestions__card {
+            box-sizing: border-box;
+            position: relative;
+            min-width: 133px;
+            padding: 23px 11px 12px 11px;
+            transition: ease-in-out 0.25s, opacity 0.5s;
+            opacity: 0.25;
+        }
+        .suggestions__card h2 {
+            margin: 0 0 21px 0;
+            font-family: SFProDisplay, sans-serif, serif;
+            font-size: 17px;
+            font-weight: 600;
+            line-height: 20px;
+            text-align: center;
+        }
+        .suggestions__discount {
+            position: absolute;
+            top: 1px;
+            right: 1px;
+            font-family: SFProDisplay, sans-serif, serif;;
+            font-size: 10px;
+            background: red;
+            width: 30px;
+            margin: 0;
+            line-height: 30px;
+            border-radius: 50%;
+            text-align: center;
+        }
+        .suggestions__price {
+            width: 68px;
+            font-size: 14px;
+            line-height: 13px;
+            text-align: center;
+            margin: 0 auto 13px auto;
+        }
+        .suggestions__price strong {
+            font-size: 22px;
+        }
+        .suggestions__continue {
+            display: block;
+            max-width: 280px;
+            width: 100%;
+            margin: 0 auto 16px auto;
+            font-family: SFProDisplay, sans-serif, serif;
+            font-size: 17px;
+            font-weight: 500;
+            line-height: 52px;
+            text-align: center;
+            text-decoration: none;
+            color: #fff;
+            border: none;
+            border-radius: 30px;
+            background: linear-gradient(270deg, #1987FF 0%, #19CCFF 100%);
+            cursor: pointer;
+        }
+        .suggestions__continue--noscript {
+            margin-top: 30px;
+        }
+        .suggestions__additional-information {
+            margin-bottom: 4px;
+            font-family: Roboto, sans-serif, serif;
+            font-size: 11px;
+            font-weight: 300;
+            line-height: 13px;
+            text-align: center;
+            opacity: 0.5;
+        }
+        footer {
+            box-sizing: border-box;
+            width: min(calc(100% + 40px), 100vw);
+            margin-left: max(calc((100vw - 100%) / -2), -20px);
+            padding-bottom: 25px;
+        }
+        .footer__links-list {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 0 10px;
+            list-style: none;
+        }
+        .footer__links-list-item a {
+            display: block;
+            padding: 0 10px;
+            font-family: Roboto, sans-serif, serif;
+            font-size: 11px;
+            font-weight: 300;
+            line-height: 38px;
+            color: #afb1c0;
+        }
+    </style>
+</head> 
+<body>
+    <header>
+        <nav>
+            <a class='header__close' href='#' title='Return to home page'>
+                <span class='visually-hidden'>Close</span>
+            </a>
+
+            <ul class='header__menu'>
+                <li class='header__menu-item'>
+                    <a class='header__menu-link' href='#' title='Restore this page'>Restore</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class='main__wrapper'>
+            <div class='main__container'>
+                <section class='features'>
+                    <h1 class='features__title'>
+                        Unlimited Access
+                        <br>to All Features
+                    </h1>
+    
+                    <ul class='features__list'>
+                        <li class='features__item features__item--unlimited-documents'>
+                            Unlimited documents
+                        </li>
+                        <li class='features__item features__item--export-to-clouds'>
+                            Export to clouds
+                        </li>
+                        <li class='features__item features__item--text-recognition'>
+                            Text recognition (OCR)
+                        </li>
+                    </ul>
+                </section> <!-- features -->
+
+                <section class='suggestions'>
+                    <form class='suggestions__form'>
+                        <fieldset class='suggestions__fieldset'>
+                            <legend class='visually-hidden'>
+                                <h2>Suggestions</h2>
+                            </legend>
+                            <ul class='suggestions__list'>
+                                <li class='suggestions__list-item'>
+                                    <div class='suggestions__card suggestions__card--active suggestions__card--noscript'>
+                                        <h2>
+                                            <label for='monthly'>Monthly</label>
+                                        </h2>
+                                        <!--
+                                            we need to cancel highlighting when scripts are disabled,
+                                            because we have submit buttons to send messages (the highlighting is useless and confuses the user
+                                            when scripts are disabled)
+                                            So all selection processing will be in js (no css)
+                                        -->
+                                        <input type='radio' id='monthly' name='suggestions' value='monthly' checked>
+                                        <p class='suggestions__price'>
+                                            <strong>$9.99</strong>
+                                            <br>per month
+                                        </p>
+                                        <p class='suggestions__benefit'>3 days free!</p>
+                                        <p class='suggestions__price-per-month'>$9.99 month</p>
+                                    </div>
+                                    <noscript>
+                                        <button
+                                            class='suggestions__continue suggestions__continue--noscript'
+                                            type='submit'
+                                            name='suggestions'
+                                            value='monthly'
+                                            formaction='https://google.com/'
+                                        >
+                                            Continue
+                                        </button>
+                                    </noscript>
+                                </li>
+    
+                                <li class='suggestions__list-item'>
+                                    <div class='suggestions__card suggestions__card--with-discount suggestions__card--noscript'>
+                                        <h2>
+                                            <label for='annually'>Annually</label>
+                                        </h2>
+                                        <!--
+                                            we need to cancel highlighting when scripts are disabled,
+                                            because we have submit buttons to send messages (the highlighting is useless and confuses the user
+                                            when scripts are disabled)
+                                            So all selection processing will be in js (no css)
+                                        -->
+                                        <input type='radio' name='suggestions' value='annually' id='annually'>
+                                        <p class='suggestions__price'>
+                                            <strong>$19.99</strong>
+                                            <br>per year
+                                        </p>
+                                        <p class='suggestions__discount'>
+                                            <strong>-83%</strong>
+                                        </p>
+                                        <p class='suggestions__benefit'>most popular</p>
+                                        <p class='suggestions__price-per-month'>$1.66 month</p>
+                                    </div>
+                                    <noscript>
+                                        <button
+                                            class='suggestions__continue suggestions__continue--noscript'
+                                            type='submit'
+                                            name='suggestions'
+                                            value='monthly'
+                                            formaction='https://yandex.com/'
+                                        >
+                                            Continue
+                                        </button>
+                                    </noscript>
+                                </li>
+                            </ul>
+                        </fieldset>
+    
+                        <button type='submit' class='suggestions__continue suggestions__continue-submit visually-hidden'>Continue</button> 
+                        <p class='suggestions__additional-information'>Auto-rewable. Cancel anytime</p>
+                    </form>
+                </section><!-- suggestions -->
+
+                <footer>
+                    <ul class='footer__links-list'>
+                        <li class='footer__links-list-item'>
+                            <a class='terms-of-use-link' href='#' title='link to terms of use page'>Terms of Use</a>
+                        </li>
+                        <li class='footer__links-list-item'>
+                            <a class='privacy-policy-link' href='#' title='link to privacy policy page'>Privacy Policy</a>
+                        </li>
+                    </ul>
+                </footer>
+            </div> <!-- main__content -->
+        </div> <!-- main__wrapper -->
+    </main>
+</body>
+</html>

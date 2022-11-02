@@ -2,34 +2,40 @@
     font-family: SFProDisplay;
     font-weight: 400;
     src: url('../fonts/SF-Pro-Display-Regular.woff2') format('woff2');
+    font-display: swap;
 }
 
 @font-face {
     font-family: SFProDisplay;
     font-weight: 500;
     src: url('../fonts/SF-Pro-Display-Medium.woff2') format('woff2');
+    font-display: swap;
 }
 
 @font-face {
     font-family: SFProDisplay;
     font-weight: 600;
     src: url('../fonts/SF-Pro-Display-Semibold.woff2') format('woff2');
+    font-display: swap;
 }
 
 @font-face {
     font-family: SFProDisplay;
     font-weight: 700;
     src: url('../fonts/SF-Pro-Display-Bold.woff2') format('woff2');
+    font-display: swap;
 }
 
 @font-face {
     font-family: SFProText;
     font-weight: 100;
     src: url('../fonts/SF-Pro-Text-Light.woff2') format('woff2');
+    font-display: swap;
 }
 
 @font-face {
     font-family: Roboto;
     font-weight: 300;
     src: url('../fonts/Roboto-Light.woff2') format('woff2');
+    font-display: swap;
 }
